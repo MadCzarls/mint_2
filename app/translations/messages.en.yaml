@@ -1,0 +1,14 @@
+administration_user: "Users"
+
+link_User_list: "Users"
+
+sidebar_logout: "Logout"
+
+label__action: "Action"
+label_username: "Username"
+
+action_list: "List"
+action_register: "Register"
+action_login: "Login"
+action_disable: "Disable"
+action_logout: "Logout"
