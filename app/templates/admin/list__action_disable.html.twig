@@ -1,0 +1,12 @@
+{% if admin.hasRoute('disable') %}
+    <a class="btn btn-sm btn-danger"
+       {% if object.isDisabled() %}
+           disabled
+           href="#"
+       {% else %}
+           href="{{ admin.generateObjectUrl('disable', object) }}"
+       {% endif %}
+    >
+        <i class="fa fa-remove"></i> {{ 'action_disable'|trans }}
+    </a>
+{% endif %}

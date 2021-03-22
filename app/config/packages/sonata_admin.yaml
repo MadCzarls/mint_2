@@ -1,0 +1,18 @@
+sonata_admin:
+    title: 'Panel'
+    dashboard:
+        groups:
+            user:
+                label: "administration.groups.user"
+                keep_open: true
+        blocks:
+            - { type: sonata.admin.block.admin_list, position: left }
+    templates:
+        layout: 'admin/layout.html.twig'
+    options:
+        legacy_twig_text_extension: false
+
+sonata_block:
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
