@@ -53,9 +53,10 @@ After that log into container with `docker exec -it mint_2.php bash`, where `min
 <pre>
 composer install
 php bin/console doctrine:migrations:migrate
-php bin/console doctrine:fixtures:load -> confirm
+php bin/console doctrine:fixtures:load
 </pre>
 
+And confirm last command's execution.
 From this point forward, application should be available under `http://localhost:8050/`.
 
 # Overview
