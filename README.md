@@ -4,20 +4,23 @@ The exercise is to write a Symfony application.
 
 <pre>
 User Story 1:
-
 As a user, I want to see an option to either sign in or sign up,so I can access
-application with my accountAcceptance criteria:-User should see sign in screen
-with input data fields for 1)Username 2) Password-User should see an option to
-Sign-up if they don't have anaccount created - clicking on this option will route
-user to theSign-in screen-User with disabled account should not sign in-Signed in
-User should be redirect to restricted part ofapplication-Signed in User should see
-logout option
+application with my account
 
-User Story 2:As a signed in User, I want to see paginated list of
+Acceptance criteria:
+-User should see sign in screen with input data fields for 1)Username 2) Password
+-User should see an option to Sign-up if they don't have an account created
+-clicking on this option will route user to the Sign-in screen
+-User with disabled account should not sign in
+-Signed in User should be redirect to restricted part ofapplication
+-Signed in User should see logout option
+
+User Story 2:
+As a signed in User, I want to see paginated list of
 allapplication users, where I can disable each application account.
 </pre>
 
-Symfony 5 project running on Docker (utilizing docker-compose) with PHP 8.0 + nginx 1.19 + MySQL 8.0. By default includes xdebug extension and PHP_CodeSniffer for easy development and basic configuration for opcache for production. Includes instruction for setting it in PhpStorm.
+Symfony 4.4 (LTS) project running on Docker (utilizing docker-compose) with PHP 8.0 + nginx 1.19 + MySQL 8.0. By default includes xdebug extension and PHP_CodeSniffer for easy development and basic configuration for opcache for production. Includes instruction for setting it in PhpStorm.
 
 - https://symfony.com/
 - https://www.docker.com/
@@ -30,21 +33,11 @@ Symfony 5 project running on Docker (utilizing docker-compose) with PHP 8.0 + ng
 - https://www.php.net/manual/en/intro.opcache.php
 - https://www.jetbrains.com/phpstorm/
 
-Clone and tweak it to your needs. Tested on Linux (Ubuntu):
+# Requirements:
 
 1. Docker version 20.10.3, build 48d30b5
 1. docker-compose version 1.28.4, build cabd5cfb
-
-and Windows 10:
-
-1. Use `Docker for Windows`, at least version `3.2.1`.
-1. Switch to `Linux containers`.
-1. Go to `Settings` -> `Docker Engine` and set `experimental mode` to `true`.
-
-# TODO
-
-1. scripts - move container name to ENV and use it in scripts;
-1. change based distros (eg. Ubuntu) for something more lightweight.
+1. bash
 
 # Usage
 
@@ -59,9 +52,8 @@ After that log into container with `docker exec -it mint_2.php bash`, where `min
 
 <pre>
 composer install
-@TODO probably assets
 php bin/console doctrine:migrations:migrate
-php bin/console doctrine:fixtures:load -> yes
+php bin/console doctrine:fixtures:load -> confirm
 </pre>
 
 From this point forward, application should be available under `http://localhost:8050/`.
